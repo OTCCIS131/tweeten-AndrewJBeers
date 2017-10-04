@@ -1,13 +1,28 @@
-let buttons = document.getElementsByClassName('glyphicon glyphicon-heart');
-buttons = Array.from(buttons); //create array from the node list
-buttons.forEach(button => { //traverse through array of buttonS, foreach buttoN
-    button.addEventListener("click", e=>{ //e=event
-        let currentCount = button.nextSibling.textContent.trim()
-        currentCount = parseInt(currentCount)
-        newCount  = currentCount + 1
-        button.nextSibling.textContent = newCount
+
+$(function(){
+    $('.glyphicon-heart').click(function(event){
+       
+        // console.log(this)
+        let currentCount = $(this).text()
+        console.log(currentCount)
     })
-})
+//    ".glyphicon glyphicon-heart"
+//  ,'.glyphicon glyphicon-heart'
+//     '.likeButton', 
+});
+
+
+// let buttons = document.getElementsByClassName('glyphicon glyphicon-heart');
+// buttons = Array.from(buttons); //create array from the node list
+// buttons.forEach(button => { //traverse through array of buttonS, foreach buttoN
+//     button.addEventListener("click", e=>{ //e=event
+//         let currentCount = button.nextSibling.textContent.trim()
+//         currentCount = parseInt(currentCount)
+//         newCount  = currentCount + 1
+//         button.nextSibling.textContent = newCount
+//     })
+// })
+
 
 
 // buttons[0].addEventListener("click", function( onClick ) {
