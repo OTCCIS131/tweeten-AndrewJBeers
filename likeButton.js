@@ -3,7 +3,7 @@ $(function(){
     $('.glyphicon-heart').click(function(event){
        
         // console.log(this)
-        let currentCount = $(this).text()
+        let currentCount = $(this).next().text()
         console.log(currentCount)
     })
 //    ".glyphicon glyphicon-heart"
