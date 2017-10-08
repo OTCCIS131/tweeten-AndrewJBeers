@@ -1,7 +1,7 @@
 
 
 $(function(){
-    $('.glyphicon').click(function(e){
+    $('.btn').click(function(e){
         let currentCount = $(this).next().text()
         currentCount = parseInt(currentCount)
         let newCount  = currentCount + 1
