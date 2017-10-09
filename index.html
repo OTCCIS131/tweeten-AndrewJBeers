@@ -52,19 +52,21 @@
         </div><!--end 1st column -->
         <div class="col-md-6"><!-- begin 2dd column-->
           <div class="panel panel-default">
-            <div class="panel-heading">
-                <h1 class="panel-title">New Tweet</h1>
-            </div>
-            <div class="panel-body">
-               <div class="form-group">
-                <textarea class="form-control" rows="5" id="comment"></textarea>
+            <form id = 'newTweet'><!-- start new tweet form-->
+              <div class="panel-heading">
+                  <h1 class="panel-title">New Tweet</h1>
               </div>
-              <div class="button" >
-                <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span></button>
-                <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></button>
-                <button type="button" class="btn btn-primary pull-right">Tweet</button>
+              <div class="panel-body">
+                  <div class="form-group">
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                <div class="button" >
+                  <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span></button>
+                  <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></button>
+                  <button type="submit" id = "btnSubmitTweet" class="btn btn-primary pull-right">Tweet</button>
+                </div>
               </div>
-            </div>
+            </form><!-- end new tweet form-->
           </div>
           <div class="panel panel-default"><!--Start of My Posts-->
               <div class="panel-heading">
@@ -81,9 +83,9 @@
                         <h4 class="media-heading">Andrew Beers</h4>
                         <p>Wha Wha Whahahaha!</p>                                        
                       </div>
-                        <div class="likeButton">                         
-                          <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-heart"></span></button><span> 50</span>
-                        </div>                                            
+                         <div class="likeButton">                          
+                          <button type="button" id ="like" class="btn btn-info"><span class="glyphicon glyphicon-heart"></span></button><span> 50</span>
+                         </div>                                             
                     </div>  
               </div>
             </div>
