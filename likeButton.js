@@ -8,10 +8,17 @@ $(function(){
         $(this).next().text(" " + newCount) 
     })
 
-    $('#newTweet').click(function(e){
+    $('#newTweet').submit(function(e){
         e.preventDefault()
-        console.log(this)
-        alert("test")
+        let tweet = this.elements.comment.value
+        this.elements.comment.value = ""
+        console.log(tweet)
+
+        $('#post').clone(true).insertAfter("#postedTweets")
+        
+            
+
+        // alert("test")
     })
 
 
