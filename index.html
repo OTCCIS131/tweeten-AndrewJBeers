@@ -79,33 +79,28 @@
         <div class="panel panel-default">
           <!--Start of My Posts-->
           <div class="panel-heading">
-            <h3 class="panel-title" id="postedTweets"> My posts</h3>
+            <h3 class="panel-title" > My posts</h3>
           </div>
-          <div class="panel-body" id="post">
-            <!-- tweet start ~~~ need to start clone here-->
-            <div class="media">
-              <div class="media-left media-top">
-                <a href="#">
-                    <img class="media-object img-circle" src="images/profileImageMed.png" alt="Avatar Icon">
-                  </a>
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">Andrew Beers</h4>
-                <p>Wha Wha Whahahaha!</p>
-              </div>
-              <!-- <ul class="list-group">
-                <li class="list-group-item">
-                  <h4>Andrew Beers</h4>
-                  <p>Wha Wha Whahahaha!</p>
+          <div class="panel-body">
+            <ul class="list-group" id = "myTweets">
+              <li class="list-group-item"><!-- tweet start ~~~ need to start clone here-->
+                <div class="media">
+                  <div class="media-left media-top">
+                    <a href="#">
+                      <img class="media-object img-circle" src="images/profileImageMed.png" alt="Avatar Icon">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Andrew Beers</h4>
+                    <span class = message>Wha Wha Whahahaha!</span>
+                  </div>
+                  <div class="likeButton">
+                    <button type="button" id="like" class="btn btn-info"><span class="glyphicon glyphicon-heart"></span></button><span> 50</span>
+                  </div>
                 </li>
-              </ul>  -->
-              <div class="likeButton">
-                <button type="button" id="like" class="btn btn-info"><span class="glyphicon glyphicon-heart"></span></button><span> 50</span>
               </div>
             </div>
-          </div>
-          <!-- end of tweet-->
-
+          </ul> 
         </div>
       </div>
       <!--end 2nd column -->

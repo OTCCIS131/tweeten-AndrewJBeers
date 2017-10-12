@@ -11,14 +11,16 @@ $(function () {
     $('#newTweet').submit(function (e) {
         e.preventDefault()
         let tweet = this.elements.comment.value
-        this.elements.comment.value = ""
-        console.log(tweet)
-
-        $('#post').clone(true).insertBefore("#post")
-
-
-
-        // alert("test")
+        if (tweet.trim() == '') return
+        this.elements.comment.value = ''
+ 
+        let newElement =  $("li:last-child", $('#myTweets')).clone(true)
+        newElement.find(".message").text(tweet)
+        newElement.find("#like").next().text(" 0")
+       
+        // console.log("is this working ~~  " + newElement.find("#like").next().text())
+        
+       $("#myTweets").prepend(newElement)
     })
 
 
