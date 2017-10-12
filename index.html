@@ -1,130 +1,154 @@
 <!DOCTYPE html>
-<html lang = "en">
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Tweeten</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tweeten</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Tweeten</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active "><a href="#"> <span class="glyphicon glyphicon-home"> Home</span></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-bell"> Notifications</span></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-envelope"> Messages</span></a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"> </span></button>
-            <img src="images/ProfileIconSmall.png" alt="Avatar Icon" class="img-circle ">
-            <button type="button" class="btn btn-primary">Tweet</button>
-          </form>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav><!--/.navbar navbar default-->
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <img src="images/profileIcon.png" alt="Avatar Icon" class="img-responsive img-circle ">
-          <h1>Andrew Beers</h1>
-          <p>@ajbeers</p>
-          <h3>Electronics Department at Walmart</h3>
-        </div><!--end 1st column -->
-        <div class="col-md-6"><!-- begin 2dd column-->
-          <div class="panel panel-default">
-            <form id = 'newTweet'><!-- start new tweet form-->
-              <div class="panel-heading">
-                <h1 class="panel-title">New Tweet</h1>
-              </div>
-              <div class="panel-body">
-                <div class="form-group">
-                  <textarea class="form-control" rows="5" id="comment"></textarea>
-                </div>
-                <div class="button" >
-                  <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span></button>
-                  <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></button>
-                  <button type="submit" id = "btnSubmitTweet" class="btn btn-primary pull-right">Tweet</button>
-                </div>
-              </div>
-            </form><!-- end new tweet form-->
+        <a class="navbar-brand" href="#">Tweeten</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active "><a href="#"> <span class="glyphicon glyphicon-home"> Home</span></a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-bell"> Notifications</span></a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-envelope"> Messages</span></a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
           </div>
-          <div class="panel panel-default"><!--Start of My Posts-->
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"> </span></button>
+          <img src="images/ProfileIconSmall.png" alt="Avatar Icon" class="img-circle ">
+          <button type="button" class="btn btn-primary">Tweet</button>
+        </form>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!--/.navbar navbar default-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="images/profileIcon.png" alt="Avatar Icon" class="img-responsive img-circle ">
+        <h1>Andrew Beers</h1>
+        <p>@ajbeers</p>
+        <h3>Electronics Department at Walmart</h3>
+      </div>
+      <!--end 1st column -->
+      <div class="col-md-6">
+        <!-- begin 2dd column-->
+        <div class="panel panel-default">
+          <form id='newTweet'>
+            <!-- start new tweet form-->
             <div class="panel-heading">
-              <h3 class="panel-title" id = "postedTweets"> My posts</h3>
+              <h1 class="panel-title">New Tweet</h1>
             </div>
-            <div class="panel-body" id = "post" >  <!-- tweet start ~~~ need to start clone here-->
-              <div class="media">
-                <div class="media-left media-top">
-                  <a href="#">
+            <div class="panel-body">
+              <div class="form-group">
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+              </div>
+              <div class="button">
+                <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span></button>
+                <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></button>
+                <button type="submit" id="btnSubmitTweet" class="btn btn-primary pull-right">Tweet</button>
+              </div>
+            </div>
+          </form>
+          <!-- end new tweet form-->
+        </div>
+        <div class="panel panel-default">
+          <!--Start of My Posts-->
+          <div class="panel-heading">
+            <h3 class="panel-title" id="postedTweets"> My posts</h3>
+          </div>
+          <div class="panel-body" id="post">
+            <!-- tweet start ~~~ need to start clone here-->
+            <div class="media">
+              <div class="media-left media-top">
+                <a href="#">
                     <img class="media-object img-circle" src="images/profileImageMed.png" alt="Avatar Icon">
                   </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Andrew Beers</h4>
-                  <p>Wha Wha Whahahaha!</p>                                        
-                </div>
-                <div class="likeButton">                          
-                  <button type="button" id ="like" class="btn btn-info"><span class="glyphicon glyphicon-heart"></span></button><span> 50</span>
-                </div>                                             
-              </div>  
-            </div> <!-- end of tweet-->
-            
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Andrew Beers</h4>
+                <p>Wha Wha Whahahaha!</p>
+              </div>
+              <!-- <ul class="list-group">
+                <li class="list-group-item">
+                  <h4>Andrew Beers</h4>
+                  <p>Wha Wha Whahahaha!</p>
+                </li>
+              </ul>  -->
+              <div class="likeButton">
+                <button type="button" id="like" class="btn btn-info"><span class="glyphicon glyphicon-heart"></span></button><span> 50</span>
+              </div>
+            </div>
           </div>
-        </div><!--end 2nd column -->
-        <div class="col-md-3"><!-- begin 3rd column-->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Activity</h3>
-            </div>
-            <div class="panel-body">You think you hot stuff don'tcha!</div>
-          </div>  
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Who to Follow</h3>
-            </div>
-            <!-- <div class="panel-body">
+          <!-- end of tweet-->
+
+        </div>
+      </div>
+      <!--end 2nd column -->
+      <div class="col-md-3">
+        <!-- begin 3rd column-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Activity</h3>
+          </div>
+          <div class="panel-body">You think you hot stuff don'tcha!</div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Who to Follow</h3>
+          </div>
+          <!-- <div class="panel-body">
               Panel content
             </div> -->
-            <ul class="list-group">
-              <li class="list-group-item">people here</li>
-              <li class="list-group-item">cool awesome dude</li>
-              <li class="list-group-item">that smelly guy</li>
-            </ul>
-          </div>
-        </div><!--end 3rd column -->
+          <ul class="list-group">
+            <li class="list-group-item">people here</li>
+            <li class="list-group-item">cool awesome dude</li>
+            <li class="list-group-item">that smelly guy</li>
+          </ul>
+        </div>
       </div>
-    </div><!--/containter main-->
+      <!--end 3rd column -->
+    </div>
+  </div>
+  <!--/containter main-->
 
 
 
 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!--<script src="js/bootstrap.min.js"></script>-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-        crossorigin="anonymous"></script>
-    <!-- Script to add to "like button" count                         added by justin--> 
-    <script src="./likeButton.js"></script>                           
-    </body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!--<script src="js/bootstrap.min.js"></script>-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <!-- Script to add to "like button" count                         added by justin-->
+  <script src="./likeButton.js"></script>
+</body>
+
 </html>
